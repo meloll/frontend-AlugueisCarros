@@ -1,17 +1,29 @@
 <mat-sidenav-container  >
     <mat-sidenav class="sidenav pos" mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list class="nav-list" >
-            <a mat-list-item >
+            <a mat-list-item routerLink="/home" >
                 <i class="material-icons">
                     home
                 </i>
                 Início
             </a>
-            <a mat-list-item class="menu">
+            <a mat-list-item class="menu" routerLink="/clientes">
                 <i class="material-icons">
-                    paid
+                    person_outline
                 </i>
-                Conversor
+                Cliente
+            </a>
+            <a mat-list-item class="menu" routerLink="carros">
+                <i class="material-icons">
+                    directions_car
+                </i>
+                Carros
+            </a>
+            <a mat-list-item class="menu" routerLink="alugueis">
+                <i class="material-icons">
+                    request_quote
+                </i>
+                Alugueis
             </a>
             <a   mat-list-item >
                 <i class="material-icons">

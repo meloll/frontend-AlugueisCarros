@@ -17,6 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { ClientesComponent } from './components/views/clientes/clientes.component';
+import { CarrosComponent } from './components/views/carros/carros.component';
+import { AlugueisComponent } from './components/views/alugueis/alugueis.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { NavComponent } from './components/template/nav/nav.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
+    HomeComponent,
+    ClientesComponent,
+    CarrosComponent,
+    AlugueisComponent,
   ],
   imports: [
     BrowserModule,
