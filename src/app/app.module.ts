@@ -10,6 +10,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatFormFieldModule}from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +23,8 @@ import { HomeComponent } from './components/views/home/home.component';
 import { ClientesComponent } from './components/views/clientes/clientes.component';
 import { CarrosComponent } from './components/views/carros/carros.component';
 import { AlugueisComponent } from './components/views/alugueis/alugueis.component';
+import { ClientesReadComponent } from './components/clientes-crud/clientes-read/clientes-read.component';
+import { ClientesCreateComponent } from './components/clientes-crud/clientes-create/clientes-create.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +36,8 @@ import { AlugueisComponent } from './components/views/alugueis/alugueis.componen
     ClientesComponent,
     CarrosComponent,
     AlugueisComponent,
+    ClientesReadComponent,
+    ClientesCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +52,8 @@ import { AlugueisComponent } from './components/views/alugueis/alugueis.componen
     MatButtonModule,
     MatSnackBarModule,
     MatInputModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
