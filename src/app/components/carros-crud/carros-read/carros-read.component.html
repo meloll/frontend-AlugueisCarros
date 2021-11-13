@@ -1,0 +1,23 @@
+<mat-card class="">
+    <table class="table table-dark table-borderless table-striped  shadow-lg p-3 mb-5 bg-body rounde ">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Placa</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Cor</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let obj of carros" >
+            <td>{{obj.id}}</td>
+            <td>{{obj.marca}}</td>
+            <td>{{obj.placa}}</td>
+            <td>{{obj.preco}}</td>
+            <td>{{obj.cor}}</td>
+          </tr>
+        </tbody>
+      </table>
+</mat-card>   

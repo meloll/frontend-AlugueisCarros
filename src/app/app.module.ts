@@ -20,11 +20,15 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
+import { CarrosCrudComponent } from './components/carros-crud/carros-crud.component';
 import { ClientesComponent } from './components/views/clientes/clientes.component';
 import { CarrosComponent } from './components/views/carros/carros.component';
 import { AlugueisComponent } from './components/views/alugueis/alugueis.component';
 import { ClientesReadComponent } from './components/clientes-crud/clientes-read/clientes-read.component';
 import { ClientesCreateComponent } from './components/clientes-crud/clientes-create/clientes-create.component';
+import { AlugueisCrudComponent } from './components/alugueis-crud/alugueis-crud.component';
+import { CarrosCreateComponent } from './components/carros-crud/carros-create/carros-create.component';
+import { CarrosReadComponent } from './components/carros-crud/carros-read/carros-read.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,10 @@ import { ClientesCreateComponent } from './components/clientes-crud/clientes-cre
     AlugueisComponent,
     ClientesReadComponent,
     ClientesCreateComponent,
+    CarrosCrudComponent,
+    AlugueisCrudComponent,
+    CarrosCreateComponent,
+    CarrosReadComponent,
   ],
   imports: [
     BrowserModule,
