@@ -8,7 +8,7 @@ import { Cliente } from './cliente.model';
   providedIn: 'root'
 })
 export class ClienteService {
-  baseUrl = 'https://app-aluguelcarros.herokuapp.com/clientes ';
+  baseUrl = 'http://app-aluguelcarros.herokuapp.com/clientes/ ';
   
   constructor(private snackBar: MatSnackBar ,private http:HttpClient) { }
 
@@ -26,6 +26,10 @@ export class ClienteService {
   }
   create(cliente: Cliente):Observable<Cliente>{
     return this.http.post<Cliente>(this.baseUrl,cliente);
+  }
+
+  delete(id: string): Observable<void>{
+    return this.http.delete<void>(`${this.baseUrl}${id}`);
   }
 
 }

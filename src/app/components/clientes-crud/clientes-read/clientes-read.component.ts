@@ -22,4 +22,13 @@ export class ClientesReadComponent implements OnInit {
 
   }
 
+
+  delete(id:any){
+    console.log(id);
+    this.clienteService.delete(id).subscribe(
+    ()=>{console.log(`ID ${id} Deletado`)},
+    (err: any)=>{console.log(err)}
+    )
+  }
+
 }
