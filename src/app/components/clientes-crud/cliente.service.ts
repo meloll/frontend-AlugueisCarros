@@ -14,7 +14,7 @@ export class ClienteService {
 
   showMessage(msg: string):void{
     this.snackBar.open(msg,'X',{
-      duration: 3000,
+      duration: 8000,
       horizontalPosition:"center",
       verticalPosition: "top"
     })
@@ -29,6 +29,7 @@ export class ClienteService {
   }
 
   delete(id: string): Observable<void>{
+    console.log(`${this.baseUrl}${id}`)
     return this.http.delete<void>(`${this.baseUrl}${id}`);
   }
 

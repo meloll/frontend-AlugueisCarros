@@ -11,7 +11,7 @@ import {MatFormFieldModule}from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
-
+import {MatDialogModule} from '@angular/material/dialog'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +29,7 @@ import { ClientesCreateComponent } from './components/clientes-crud/clientes-cre
 import { AlugueisCrudComponent } from './components/alugueis-crud/alugueis-crud.component';
 import { CarrosCreateComponent } from './components/carros-crud/carros-create/carros-create.component';
 import { CarrosReadComponent } from './components/carros-crud/carros-read/carros-read.component';
+import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-delete-cliente/dialog-delete-cliente.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,9 @@ import { CarrosReadComponent } from './components/carros-crud/carros-read/carros
     AlugueisCrudComponent,
     CarrosCreateComponent,
     CarrosReadComponent,
+    DialogDeleteClienteComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -61,9 +65,11 @@ import { CarrosReadComponent } from './components/carros-crud/carros-read/carros
     MatSnackBarModule,
     MatInputModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [],
+  entryComponents:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
