@@ -18,7 +18,10 @@
             <td>{{obj.cpf}}</td>
             <td>{{obj.email}}</td>
             <td>{{obj.dataN}}</td>
-            <td><button mat-raised-button color="warn" (click)="delete(obj.id)"  ><i class="material-icons icon-excluir" >highlight_off</i></button></td>
+            <td>
+              <button mat-raised-button color="warn" (click)="openDialog(obj.id)"  ><i class="material-icons icon-excluir" >highlight_off</i></button>
+        
+            </td>
           </tr>
         </tbody>
       </table>

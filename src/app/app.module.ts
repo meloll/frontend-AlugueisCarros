@@ -11,7 +11,7 @@ import {MatFormFieldModule}from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
-
+import {MatDialogModule} from '@angular/material/dialog'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +29,11 @@ import { ClientesCreateComponent } from './components/clientes-crud/clientes-cre
 import { AlugueisCrudComponent } from './components/alugueis-crud/alugueis-crud.component';
 import { CarrosCreateComponent } from './components/carros-crud/carros-create/carros-create.component';
 import { CarrosReadComponent } from './components/carros-crud/carros-read/carros-read.component';
+<<<<<<< HEAD
 import { CarrosUpdateComponent } from './components/carros-crud/carros-update/carros-update.component';
+=======
+import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-delete-cliente/dialog-delete-cliente.component';
+>>>>>>> 473068fc616e836cc84a0519e2227685e2db1b73
 
 @NgModule({
   declarations: [
@@ -47,7 +51,13 @@ import { CarrosUpdateComponent } from './components/carros-crud/carros-update/ca
     AlugueisCrudComponent,
     CarrosCreateComponent,
     CarrosReadComponent,
+<<<<<<< HEAD
     CarrosUpdateComponent,
+=======
+    DialogDeleteClienteComponent,
+    
+
+>>>>>>> 473068fc616e836cc84a0519e2227685e2db1b73
   ],
   imports: [
     BrowserModule,
@@ -63,9 +73,15 @@ import { CarrosUpdateComponent } from './components/carros-crud/carros-update/ca
     MatSnackBarModule,
     MatInputModule,
     HttpClientModule,
+<<<<<<< HEAD
     MatSnackBarModule 
+=======
+    MatSnackBarModule,
+    MatDialogModule
+>>>>>>> 473068fc616e836cc84a0519e2227685e2db1b73
   ],
   providers: [],
+  entryComponents:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
