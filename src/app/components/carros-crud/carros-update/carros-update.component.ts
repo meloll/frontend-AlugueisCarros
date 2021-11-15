@@ -31,7 +31,7 @@ export class CarrosUpdateComponent implements OnInit {
 
   updateCarro(): void{
     this.carroService.update(this.carro).subscribe(() => {
-      this.carroService.showMessage("Atualicado com sucesso!");
+      this.carroService.showMessage("Atualizado com sucesso!");
       this.router.navigate(['/carros']);
     })
   }
