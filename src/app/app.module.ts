@@ -29,11 +29,8 @@ import { ClientesCreateComponent } from './components/clientes-crud/clientes-cre
 import { AlugueisCrudComponent } from './components/alugueis-crud/alugueis-crud.component';
 import { CarrosCreateComponent } from './components/carros-crud/carros-create/carros-create.component';
 import { CarrosReadComponent } from './components/carros-crud/carros-read/carros-read.component';
-<<<<<<< HEAD
 import { CarrosUpdateComponent } from './components/carros-crud/carros-update/carros-update.component';
-=======
 import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-delete-cliente/dialog-delete-cliente.component';
->>>>>>> 473068fc616e836cc84a0519e2227685e2db1b73
 
 @NgModule({
   declarations: [
@@ -51,13 +48,8 @@ import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-
     AlugueisCrudComponent,
     CarrosCreateComponent,
     CarrosReadComponent,
-<<<<<<< HEAD
     CarrosUpdateComponent,
-=======
-    DialogDeleteClienteComponent,
-    
-
->>>>>>> 473068fc616e836cc84a0519e2227685e2db1b73
+    DialogDeleteClienteComponent 
   ],
   imports: [
     BrowserModule,
@@ -73,12 +65,8 @@ import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-
     MatSnackBarModule,
     MatInputModule,
     HttpClientModule,
-<<<<<<< HEAD
-    MatSnackBarModule 
-=======
-    MatSnackBarModule,
+    MatSnackBarModule ,
     MatDialogModule
->>>>>>> 473068fc616e836cc84a0519e2227685e2db1b73
   ],
   providers: [],
   entryComponents:[],
