@@ -11,7 +11,10 @@
             <input matInput  type="email" placeholder="E-mail" [(ngModel)]="cliente.email" name="email">
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="password" placeholder="Senha" [(ngModel)]="cliente.senha" name="senha">
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Senha" [(ngModel)]="cliente.senha" name="senha">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
         </mat-form-field>
         <mat-form-field>
             <input matInput type="date" placeholder="Data de Nascimento" [(ngModel)]="cliente.dataN" name="dataN">

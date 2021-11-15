@@ -26,4 +26,11 @@ export class CarrosReadComponent implements OnInit {
       this.router.navigate(['/carros/update/'])
   }
 
+  formataDinheiro(valor:any){
+    valor = parseFloat(valor.toFixed(2))
+    valor = valor.toString()
+    valor = valor.replace(".",",")
+    return valor;
+  }
+
 }

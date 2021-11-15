@@ -14,7 +14,7 @@ export class CarrosCreateComponent implements OnInit {
 carro: Carro={
   marca: '',
   placa: '',
-  preco: 0,
+  preco: null,
   cor: ''
 }
 

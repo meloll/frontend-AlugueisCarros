@@ -12,7 +12,7 @@ import { DialogDeleteClienteComponent } from '../dialog-delete-cliente/dialog-de
 })
 export class ClientesReadComponent implements OnInit {
 
-  clientes?: Cliente[];
+  clientes!: Cliente[];
   confirmDelete:boolean=false
 
 

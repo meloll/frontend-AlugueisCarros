@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatIconModule} from '@angular/material/icon'
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from'@angular/material/sidenav';
 import {MatListModule} from'@angular/material/list';
@@ -12,6 +12,7 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import {MatDialogModule} from '@angular/material/dialog'
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,10 @@ import { CarrosUpdateComponent } from './components/carros-crud/carros-update/ca
 
 import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-delete-cliente/dialog-delete-cliente.component';
 import { ClientesUpdateComponent } from './components/clientes-crud/clientes-update/clientes-update.component';
+
+import localePt from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localePt,'pt')
 
 
 @NgModule({
@@ -68,9 +73,14 @@ import { ClientesUpdateComponent } from './components/clientes-crud/clientes-upd
     MatInputModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule,
+    MatIconModule
   ],
-  providers: [],
+  providers: [{
+    provide:LOCALE_ID,
+    useValue:'pt-BR'
+  }],
   entryComponents:[],
   bootstrap: [AppComponent]
 })

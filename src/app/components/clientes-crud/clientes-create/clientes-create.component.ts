@@ -17,6 +17,7 @@ export class ClientesCreateComponent implements OnInit {
     dataN:null,
     senha:''
   };
+  hide = true;
 
 
   constructor(private clienteService:ClienteService,private router:Router) { }

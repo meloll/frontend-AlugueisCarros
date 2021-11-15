@@ -18,6 +18,7 @@ export class ClientesUpdateComponent implements OnInit {
     dataN:null,
     senha:''
   };*/
+  hide=true;
 
   constructor(private router:Router,private clienteService:ClienteService, private route:ActivatedRoute ) { }
 
