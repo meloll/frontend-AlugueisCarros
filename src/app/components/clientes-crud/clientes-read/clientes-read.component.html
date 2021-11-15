@@ -7,6 +7,7 @@
             <th scope="col">CPF</th>
             <th scope="col">E-mail</th>
             <th scope="col">Data Nascimento</th>
+            <th scope="col">Editar</th>
             <th scope="col">Excluir</th>
 
           </tr>
@@ -19,8 +20,11 @@
             <td>{{obj.email}}</td>
             <td>{{obj.dataN}}</td>
             <td>
+              <button mat-raised-button color="primary" routerLink="/clientes/update/{{obj.id}}"  ><i class="material-icons icon-excluir" >edit</i></button>
+
+            </td>
+            <td>
               <button mat-raised-button color="warn" (click)="openDialog(obj.id)"  ><i class="material-icons icon-excluir" >highlight_off</i></button>
-        
             </td>
           </tr>
         </tbody>

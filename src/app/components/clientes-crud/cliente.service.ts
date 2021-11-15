@@ -9,7 +9,7 @@ import { Cliente } from './cliente.model';
 })
 export class ClienteService {
   baseUrl = 'http://app-aluguelcarros.herokuapp.com/clientes/ ';
-  
+  //baseUrl = 'http://localhost:8080/clientes/ ';
   constructor(private snackBar: MatSnackBar ,private http:HttpClient) { }
 
   showMessage(msg: string):void{
@@ -31,6 +31,14 @@ export class ClienteService {
   delete(id: string): Observable<void>{
     console.log(`${this.baseUrl}${id}`)
     return this.http.delete<void>(`${this.baseUrl}${id}`);
+  }
+
+  readById(id:string): Observable<Cliente>{
+    return this.http.get<Cliente>(`${this.baseUrl}${id}`)
+  }
+
+  update(cliente:Cliente): Observable<Cliente>{
+    return this.http.put<Cliente>(`${this.baseUrl}${cliente.id}`,cliente)
   }
 
 }

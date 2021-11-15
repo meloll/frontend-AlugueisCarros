@@ -20,7 +20,6 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
-import { CarrosCrudComponent } from './components/carros-crud/carros-crud.component';
 import { ClientesComponent } from './components/views/clientes/clientes.component';
 import { CarrosComponent } from './components/views/carros/carros.component';
 import { AlugueisComponent } from './components/views/alugueis/alugueis.component';
@@ -32,6 +31,7 @@ import { CarrosReadComponent } from './components/carros-crud/carros-read/carros
 import { CarrosUpdateComponent } from './components/carros-crud/carros-update/carros-update.component';
 
 import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-delete-cliente/dialog-delete-cliente.component';
+import { ClientesUpdateComponent } from './components/clientes-crud/clientes-update/clientes-update.component';
 
 
 @NgModule({
@@ -46,12 +46,12 @@ import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-
     AlugueisComponent,
     ClientesReadComponent,
     ClientesCreateComponent,
-    CarrosCrudComponent,
     AlugueisCrudComponent,
     CarrosCreateComponent,
     CarrosReadComponent,
     CarrosUpdateComponent,
     DialogDeleteClienteComponent,
+    ClientesUpdateComponent,
   ],
   imports: [
     BrowserModule,

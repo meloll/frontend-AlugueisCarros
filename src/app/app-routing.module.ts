@@ -5,6 +5,8 @@ import { ClientesComponent } from './components/views/clientes/clientes.componen
 import { HomeComponent } from './components/views/home/home.component';
 import { ClientesCreateComponent } from './components/clientes-crud/clientes-create/clientes-create.component';
 import { CarrosCreateComponent } from './components/carros-crud/carros-create/carros-create.component';
+import { ClientesUpdateComponent } from './components/clientes-crud/clientes-update/clientes-update.component';
+
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -17,8 +19,8 @@ const routes: Routes = [
   {path: "alugueis", component: AlugueisComponent},
   {path: "clientes/create", component:ClientesCreateComponent},
   {path: "carros/create", component: CarrosCreateComponent},
-  {path: "carros/update", component: CarrosUpdateComponent},
-  {path: "carros/:id", component: CarrosUpdateComponent}
+  {path: "carros/update/:id", component: CarrosUpdateComponent},//Forma "correta"
+  {path: "clientes/update/:id", component: ClientesUpdateComponent}
 ];
 
 @NgModule({

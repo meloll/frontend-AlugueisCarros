@@ -8,7 +8,7 @@ import { Carro } from './carro.model';
     providedIn: 'root'
   })
   export class CarroService {
-    baseUrl = 'https://app-aluguelcarros.herokuapp.com/carros ';
+    baseUrl = 'https://app-aluguelcarros.herokuapp.com/carros/ '; // coloquei uma "/" no final da url
     
     constructor(private snackBar: MatSnackBar ,private http:HttpClient) { }
   
@@ -29,13 +29,13 @@ import { Carro } from './carro.model';
     }
 
     readById(id: string): Observable<Carro>{
-      const url = `${this.baseUrl}/${id}`
+      const url = `${this.baseUrl}${id}`// tirei a "/" do meio , pq ela estava colocando um espaço a mais por isso n achava a url da API, essa "/" foi parar na variavel baseUrl lá em cima
       console.log("url   "+url);
       return this.http.get<Carro>(url)
     }
   
     update(carro: Carro): Observable<Carro>{
-      const url = `${this.baseUrl}/${carro.id}`
+      const url = `${this.baseUrl}${carro.id}`// tirei a "/" do meio , pq ela estava colocando um espaço a mais por isso n achava a url da API, essa "/" foi parar na variavel baseUrl
       return this.http.put<Carro>(url, carro)
     }
 

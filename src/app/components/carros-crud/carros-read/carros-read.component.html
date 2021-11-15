@@ -19,7 +19,7 @@
             <td>{{obj.preco}}</td>
             <td>{{obj.cor}}</td>
             <td>
-              <button mat-raised-button color="warn" (click)="paginaUpdate()"><i class="material-icons icon-excluir" >edit</i></button>
+              <button mat-raised-button color="warn" routerLink="/carros/update/{{obj.id}}"><i class="material-icons icon-excluir" >edit</i></button><!--Coloquei um routerLink na rota correta-->
             </td>
             <td><button mat-raised-button color="warn" ><i class="material-icons icon-excluir" >highlight_off</i></button></td>
           </tr>
