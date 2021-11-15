@@ -7,7 +7,8 @@
             <th scope="col">Placa</th>
             <th scope="col">Preço</th>
             <th scope="col">Cor</th>
-
+            <th scope="col">Alterar</th>
+            <th scope="col">Excluir</th>
           </tr>
         </thead>
         <tbody>
@@ -17,6 +18,10 @@
             <td>{{obj.placa}}</td>
             <td>{{obj.preco}}</td>
             <td>{{obj.cor}}</td>
+            <td>
+              <button mat-raised-button color="warn" (click)="paginaUpdate()"><i class="material-icons icon-excluir" >edit</i></button>
+            </td>
+            <td><button mat-raised-button color="warn" ><i class="material-icons icon-excluir" >highlight_off</i></button></td>
           </tr>
         </tbody>
       </table>

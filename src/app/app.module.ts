@@ -29,6 +29,7 @@ import { ClientesCreateComponent } from './components/clientes-crud/clientes-cre
 import { AlugueisCrudComponent } from './components/alugueis-crud/alugueis-crud.component';
 import { CarrosCreateComponent } from './components/carros-crud/carros-create/carros-create.component';
 import { CarrosReadComponent } from './components/carros-crud/carros-read/carros-read.component';
+import { CarrosUpdateComponent } from './components/carros-crud/carros-update/carros-update.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { CarrosReadComponent } from './components/carros-crud/carros-read/carros
     AlugueisCrudComponent,
     CarrosCreateComponent,
     CarrosReadComponent,
+    CarrosUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,7 @@ import { CarrosReadComponent } from './components/carros-crud/carros-read/carros
     MatSnackBarModule,
     MatInputModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

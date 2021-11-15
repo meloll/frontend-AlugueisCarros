@@ -1,3 +1,4 @@
+import { CarrosUpdateComponent } from './components/carros-crud/carros-update/carros-update.component';
 import { AlugueisComponent } from './components/views/alugueis/alugueis.component';
 import { CarrosComponent } from './components/views/carros/carros.component';
 import { ClientesComponent } from './components/views/clientes/clientes.component';
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path: "carros", component: CarrosComponent},
   {path: "alugueis", component: AlugueisComponent},
   {path: "clientes/create", component:ClientesCreateComponent},
-  {path: "carros/create", component: CarrosCreateComponent}
+  {path: "carros/create", component: CarrosCreateComponent},
+  {path: "carros/update", component: CarrosUpdateComponent},
+  {path: "carros/:id", component: CarrosUpdateComponent}
 ];
 
 @NgModule({

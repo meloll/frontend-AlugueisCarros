@@ -27,6 +27,17 @@ import { Carro } from './carro.model';
     create(carro: Carro):Observable<Carro>{
       return this.http.post<Carro>(this.baseUrl,carro);
     }
+
+    readById(id: string): Observable<Carro>{
+      const url = `${this.baseUrl}/${id}`
+      console.log("url   "+url);
+      return this.http.get<Carro>(url)
+    }
   
+    update(carro: Carro): Observable<Carro>{
+      const url = `${this.baseUrl}/${carro.id}`
+      return this.http.put<Carro>(url, carro)
+    }
+
   }
   
