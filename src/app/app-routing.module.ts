@@ -9,8 +9,9 @@ import { CarrosCreateComponent } from './components/carros-crud/carros-create/ca
 import { ClientesUpdateComponent } from './components/clientes-crud/clientes-update/clientes-update.component';
 
 
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AlugueisUpdateComponent } from './components/alugueis-crud/alugueis-update/alugueis-update.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: "carros/create", component: CarrosCreateComponent},
   {path: "carros/update/:id", component: CarrosUpdateComponent},//Forma "correta"
   {path: "clientes/update/:id", component: ClientesUpdateComponent},
-  {path: "alugueis/create", component:AlugueisCreateComponent}
+  {path: "alugueis/create", component:AlugueisCreateComponent},
+  {path: "alugueis/update/:id",component:AlugueisUpdateComponent}
 ];
 
 @NgModule({
