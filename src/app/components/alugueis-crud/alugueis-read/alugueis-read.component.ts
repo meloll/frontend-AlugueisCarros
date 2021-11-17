@@ -13,6 +13,7 @@ import { DialogueDeleteAlugueisComponent } from '../dialogue-delete-alugueis/dia
 export class AlugueisReadComponent implements OnInit {
 
   alugueis!: Aluguel[];
+  loading:boolean=true;
 
   constructor(private aluguelService:AluguelService,router:Router,public dialog: MatDialog) { }
 
@@ -20,6 +21,7 @@ export class AlugueisReadComponent implements OnInit {
     this.aluguelService.read().subscribe(aluguel =>{
       this.alugueis = aluguel;
       console.log(this.alugueis)
+      this.loading=false;
     });
 
   }

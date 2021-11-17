@@ -13,7 +13,7 @@ import { DialogDeleteClienteComponent } from '../dialog-delete-cliente/dialog-de
 export class ClientesReadComponent implements OnInit {
 
   clientes!: Cliente[];
-  confirmDelete:boolean=false
+  loading:boolean=true;
 
 
   constructor(private clienteService: ClienteService,public dialog: MatDialog,private router:Router) { }
@@ -22,6 +22,7 @@ export class ClientesReadComponent implements OnInit {
     this.clienteService.read().subscribe(cliente =>{
       this.clientes = cliente;
       console.log(this.clientes);
+      this.loading=false;
     } );
 
   }

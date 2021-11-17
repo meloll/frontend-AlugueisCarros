@@ -14,6 +14,7 @@ import { Carro } from '../carro.model';
 export class CarrosReadComponent implements OnInit {
 
   carros?: Carro[];
+  loading:boolean=true;
 
   constructor(private carroService:CarroService, private router: Router, public dialog: MatDialog) { }
 
@@ -21,6 +22,7 @@ export class CarrosReadComponent implements OnInit {
     this.carroService.read().subscribe(carro =>{
       this.carros = carro;
       console.log("Carros "+this.carros);
+      this.loading=false;
     } );
   }
 
