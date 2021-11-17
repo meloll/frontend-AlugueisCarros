@@ -39,5 +39,9 @@ import { Carro } from './carro.model';
       return this.http.put<Carro>(url, carro)
     }
 
+    delete(id: string): Observable<void>{
+      console.log(`${this.baseUrl}${id}`)
+      return this.http.delete<void>(`${this.baseUrl}${id}`);
+    }
   }
   

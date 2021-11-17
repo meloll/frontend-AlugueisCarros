@@ -43,6 +43,7 @@ import { AlugueisReadComponent } from './components/alugueis-crud/alugueis-read/
 import { AlugueisCreateComponent } from './components/alugueis-crud/alugueis-create/alugueis-create.component';
 import { AlugueisUpdateComponent } from './components/alugueis-crud/alugueis-update/alugueis-update.component';
 import { DialogueDeleteAlugueisComponent } from './components/alugueis-crud/dialogue-delete-alugueis/dialogue-delete-alugueis.component';
+import { DialogDeleteCarroComponent } from './components/carros-crud/dialog-delete-carro/dialog-delete-carro.component';
 registerLocaleData(localePt,'pt')
 
 
@@ -67,6 +68,7 @@ registerLocaleData(localePt,'pt')
     AlugueisCreateComponent,
     AlugueisUpdateComponent,
     DialogueDeleteAlugueisComponent,
+    DialogDeleteCarroComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,5 @@
+import { MatDialog } from '@angular/material/dialog';
+import { DialogDeleteCarroComponent } from './../dialog-delete-carro/dialog-delete-carro.component';
 import { Router } from '@angular/router';
 import { CarroService } from './../carro.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +15,7 @@ export class CarrosReadComponent implements OnInit {
 
   carros?: Carro[];
 
-  constructor(private carroService:CarroService, private router: Router) { }
+  constructor(private carroService:CarroService, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.carroService.read().subscribe(carro =>{
@@ -33,4 +35,30 @@ export class CarrosReadComponent implements OnInit {
     return valor;
   }
 
+
+  delete(id:any){
+    console.log(id);
+    this.carroService.delete(id).subscribe(() => {
+      console.log(`ID ${id} Deletado com sucesso!`);
+      location.reload();
+      this.carroService.showMessage("Carro excluído com sucesso!")
+    },
+    (err:any) => {console.log(err);
+      this.carroService.showMessage("Não foi possível excluir, o carro ainda está nos registros de aluguéis!")})
+  }
+
+  openDialog(id: any){
+    const dialogRef = this.dialog.open(DialogDeleteCarroComponent);
+
+    dialogRef.afterClosed().subscribe(result =>{
+      if(result){
+        console.log("Carro deletado!")
+        this.delete(id);
+      }
+      else{
+        console.log("Cancelado!")
+      }
+    })
+
+  }
 }
