@@ -10,13 +10,15 @@ import { ClienteService } from '../cliente.service';
 })
 export class ClientesCreateComponent implements OnInit {
   
+  
+  
   cliente: Cliente={
-    nome:'',
-    cpf:'',
-    email:'',
+    nome:null,
+    cpf:null,
+    email:null,
     dataN:null,
-    senha:''
-  };
+    senha:null,
+  }
   hide = true;
 
 
@@ -27,11 +29,15 @@ export class ClientesCreateComponent implements OnInit {
 
 
   createCliente():void{
-    this.clienteService.create(this.cliente).subscribe(() =>{
-       this.clienteService.showMessage("Cliente Cadastrado!")
-       this.router.navigate(['clientes']);
+    if(this.cliente.cpf!=null)
+      this.clienteService.create(this.cliente).subscribe(() =>{
+        this.clienteService.showMessage("Cliente Cadastrado!")
+        this.router.navigate(['clientes']);
 
-    } )
+      } )
+    else{
+      this.clienteService.showMessage("Não foi possivel cadastrar esse cliente!")
+    }
   }
   cancel():void{
     this.router.navigate(['clientes'])

@@ -2,22 +2,22 @@
     <mat-card-title>Novo Cliente</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput type="text" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome">
+            <input matInput type="text" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome" required="true">
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="text" placeholder="CPF" [(ngModel)]="cliente.cpf" name="cpf">
+            <input matInput type="text" placeholder="CPF" [(ngModel)]="cliente.cpf" name="cpf" required="true"  >
         </mat-form-field>
         <mat-form-field>
-            <input matInput  type="email" placeholder="E-mail" [(ngModel)]="cliente.email" name="email">
+            <input matInput  type="email" placeholder="E-mail" [(ngModel)]="cliente.email" name="email" required="true">
         </mat-form-field>
         <mat-form-field>
-            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Senha" [(ngModel)]="cliente.senha" name="senha">
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Senha" [(ngModel)]="cliente.senha" name="senha" required="true">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="date" placeholder="Data de Nascimento" [(ngModel)]="cliente.dataN" name="dataN">
+            <input matInput type="date" placeholder="Data de Nascimento" [(ngModel)]="cliente.dataN" name="dataN" required="true">
         </mat-form-field>
     </form>
 </mat-card>

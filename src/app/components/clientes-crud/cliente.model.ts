@@ -1,8 +1,8 @@
-export interface Cliente{
+export interface Cliente {
     id?:number;
-    nome:string;
-    cpf:string;
-    email:string;
-    senha:string;
+    nome:any;
+    cpf:any;
+    email:any;
+    senha:any;
     dataN:any;
 }

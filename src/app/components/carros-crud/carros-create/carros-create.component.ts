@@ -11,12 +11,14 @@ import { CarroService } from '../carro.service';
 })
 export class CarrosCreateComponent implements OnInit {
 
-carro: Carro={
-  marca: '',
-  placa: '',
-  preco: null,
-  cor: ''
-}
+  carro: Carro={
+    marca: '',
+    placa: '',
+    preco: null,
+    cor: ''
+  }
+
+
 
   constructor(private carroService:CarroService, private router:Router) { }
 
@@ -24,11 +26,16 @@ carro: Carro={
   }
 
   createCarro():void{
-    this.carroService.create(this.carro).subscribe(() =>{
-       this.carroService.showMessage("Carro Cadastrado!")
-       this.router.navigate(['carros']);
 
-    } )
+    if(this.carro.marca!=null)
+      this.carroService.create(this.carro).subscribe(() =>{
+        this.carroService.showMessage("Carro Cadastrado!")
+        this.router.navigate(['carros']);
+
+      } )
+    else{
+      this.carroService.showMessage("Não foi possivel cadastrar o carro!")
+    }
   }
   cancel():void{
     this.router.navigate(['carros'])

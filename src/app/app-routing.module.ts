@@ -15,7 +15,7 @@ import { AlugueisUpdateComponent } from './components/alugueis-crud/alugueis-upd
 
 
 const routes: Routes = [
-  {path: "", component: HomeComponent},
+  {path: "home", component: HomeComponent},
   {path: "clientes", component: ClientesComponent},
   {path: "carros", component: CarrosComponent},
   {path: "alugueis", component: AlugueisComponent},
