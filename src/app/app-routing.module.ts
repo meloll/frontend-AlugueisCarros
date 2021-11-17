@@ -1,3 +1,4 @@
+import { AlugueisCreateComponent } from './components/alugueis-crud/alugueis-create/alugueis-create.component';
 import { CarrosUpdateComponent } from './components/carros-crud/carros-update/carros-update.component';
 import { AlugueisComponent } from './components/views/alugueis/alugueis.component';
 import { CarrosComponent } from './components/views/carros/carros.component';
@@ -13,14 +14,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  {path: "home", component: HomeComponent},
+  {path: "", component: HomeComponent},
   {path: "clientes", component: ClientesComponent},
   {path: "carros", component: CarrosComponent},
   {path: "alugueis", component: AlugueisComponent},
   {path: "clientes/create", component:ClientesCreateComponent},
   {path: "carros/create", component: CarrosCreateComponent},
   {path: "carros/update/:id", component: CarrosUpdateComponent},//Forma "correta"
-  {path: "clientes/update/:id", component: ClientesUpdateComponent}
+  {path: "clientes/update/:id", component: ClientesUpdateComponent},
+  {path: "alugueis/create", component:AlugueisCreateComponent}
 ];
 
 @NgModule({

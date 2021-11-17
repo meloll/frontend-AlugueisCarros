@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-alugueis-crud',
+  selector: 'app-alugueis-update',
   template: `
     <p>
-      alugueis-crud works!
+      alugueis-update works!
     </p>
   `,
   styles: [
   ]
 })
-export class AlugueisCrudComponent implements OnInit {
+export class AlugueisUpdateComponent implements OnInit {
 
   constructor() { }
 

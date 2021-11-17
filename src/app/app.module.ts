@@ -13,6 +13,8 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import {MatDialogModule} from '@angular/material/dialog'
 import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +28,6 @@ import { CarrosComponent } from './components/views/carros/carros.component';
 import { AlugueisComponent } from './components/views/alugueis/alugueis.component';
 import { ClientesReadComponent } from './components/clientes-crud/clientes-read/clientes-read.component';
 import { ClientesCreateComponent } from './components/clientes-crud/clientes-create/clientes-create.component';
-import { AlugueisCrudComponent } from './components/alugueis-crud/alugueis-crud.component';
 import { CarrosCreateComponent } from './components/carros-crud/carros-create/carros-create.component';
 import { CarrosReadComponent } from './components/carros-crud/carros-read/carros-read.component';
 import { CarrosUpdateComponent } from './components/carros-crud/carros-update/carros-update.component';
@@ -36,6 +37,9 @@ import { ClientesUpdateComponent } from './components/clientes-crud/clientes-upd
 
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
+import { AlugueisReadComponent } from './components/alugueis-crud/alugueis-read/alugueis-read.component';
+import { AlugueisCreateComponent } from './components/alugueis-crud/alugueis-create/alugueis-create.component';
+import { AlugueisUpdateComponent } from './components/alugueis-crud/alugueis-update/alugueis-update.component';
 registerLocaleData(localePt,'pt')
 
 
@@ -51,12 +55,14 @@ registerLocaleData(localePt,'pt')
     AlugueisComponent,
     ClientesReadComponent,
     ClientesCreateComponent,
-    AlugueisCrudComponent,
     CarrosCreateComponent,
     CarrosReadComponent,
     CarrosUpdateComponent,
     DialogDeleteClienteComponent,
     ClientesUpdateComponent,
+    AlugueisReadComponent,
+    AlugueisCreateComponent,
+    AlugueisUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +81,9 @@ registerLocaleData(localePt,'pt')
     MatSnackBarModule,
     MatDialogModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule 
+
   ],
   providers: [{
     provide:LOCALE_ID,

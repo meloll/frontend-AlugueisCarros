@@ -1,0 +1,36 @@
+<mat-card class="">
+    <table class="table table-dark table-borderless table-striped  shadow-lg p-3 mb-5 bg-body rounde ">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Data de Saída</th>
+            <th scope="col">Data de Entrega</th>
+            <th scope="col">CPF do Cliente</th>
+            <th scope="col">Placa do Carro</th>
+            <th scope="col">Dias Alugados</th>
+            <th scope="col">Valor do Aluguel</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let obj of alugueis" >
+            <td>{{obj.id}}</td>
+            <td>{{obj.dataSaida}}</td>
+            <td>{{obj.dataEntrega}}</td>
+            <td>{{obj.cliente.cpf}}</td>
+            <td>{{obj.carro.placa}}</td>
+            <td>{{obj.dia}}</td>
+            <td>{{obj.valor| currency: 'BRL'}}</td>
+            <td>
+              <button mat-raised-button color="primary" routerLink="#"  ><i class="material-icons icon-excluir" >edit</i></button>
+
+            </td>
+            <td>
+              <button mat-raised-button color="warn"  ><i class="material-icons icon-excluir" >highlight_off</i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</mat-card>   
