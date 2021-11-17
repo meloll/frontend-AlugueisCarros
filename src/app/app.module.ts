@@ -16,6 +16,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import {MatProgressBarModule} from '@angular/material/progress-bar'; 
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -88,7 +89,8 @@ registerLocaleData(localePt,'pt')
     MatIconModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatProgressBarModule
 
   ],
   providers: [{

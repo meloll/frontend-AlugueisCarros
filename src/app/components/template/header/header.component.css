@@ -17,8 +17,8 @@
 .header .title-group{
     padding-left: 15px;
     font-weight: bold;
-    color: white;
-    margin-right: 15px;
+    color: rgb(192, 163, 31);
+    margin-right: 0px;
     
 }
 
@@ -29,4 +29,8 @@
 .header .title-group i{
     padding-right: 5px;
     color: rgb(2, 191, 204);
+}
+
+.logo{
+    width: 75px;
 }
