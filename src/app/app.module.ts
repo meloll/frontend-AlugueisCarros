@@ -40,6 +40,7 @@ import { registerLocaleData } from '@angular/common';
 import { AlugueisReadComponent } from './components/alugueis-crud/alugueis-read/alugueis-read.component';
 import { AlugueisCreateComponent } from './components/alugueis-crud/alugueis-create/alugueis-create.component';
 import { AlugueisUpdateComponent } from './components/alugueis-crud/alugueis-update/alugueis-update.component';
+import { DialogueDeleteAlugueisComponent } from './components/alugueis-crud/dialogue-delete-alugueis/dialogue-delete-alugueis.component';
 registerLocaleData(localePt,'pt')
 
 
@@ -63,6 +64,7 @@ registerLocaleData(localePt,'pt')
     AlugueisReadComponent,
     AlugueisCreateComponent,
     AlugueisUpdateComponent,
+    DialogueDeleteAlugueisComponent,
   ],
   imports: [
     BrowserModule,
