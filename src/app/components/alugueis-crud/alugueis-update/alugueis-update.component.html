@@ -19,13 +19,20 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
-        
-        <mat-form-field>
-            <input matInput type="date" placeholder="Data Saída" [(ngModel)]="aluguel.dataSaida"  name="dataSaida">
-        </mat-form-field> 
-        <mat-form-field>
-          <input matInput type="date" placeholder="Data Entrega" [(ngModel)]="aluguel.dataEntrega"  name="dataEntrega">
-      </mat-form-field>
+          <mat-form-field appearance="fill" class="example-form-field">
+            <mat-label>Entre com a data</mat-label>
+            <mat-date-range-input [rangePicker]="rangePicker">
+              <input matStartDate placeholder="Data Saída" [(ngModel)]="aluguel.dataSaida" name="dataSaida">
+              <input matEndDate placeholder="Data Entrega" [(ngModel)]="aluguel.dataEntrega"  name="dataEntrega">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+            <mat-date-range-picker #rangePicker>
+              <mat-date-range-picker-actions>
+                <button mat-button matDateRangePickerCancel>Cancelar</button>
+                <button mat-raised-button color="primary" matDateRangePickerApply>Aplicar</button>
+              </mat-date-range-picker-actions>
+            </mat-date-range-picker>
+          </mat-form-field>
         
     </form>
 </mat-card>

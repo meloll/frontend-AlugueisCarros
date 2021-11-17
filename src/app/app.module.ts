@@ -14,6 +14,8 @@ import {HttpClientModule} from '@angular/common/http'
 import {MatDialogModule} from '@angular/material/dialog'
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -84,7 +86,9 @@ registerLocaleData(localePt,'pt')
     MatDialogModule,
     MatTableModule,
     MatIconModule,
-    MatSelectModule 
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ],
   providers: [{
