@@ -7,7 +7,7 @@ export interface Aluguel{
     cliente: {
             id:number;
             nome?: String;
-            cpf?: String;
+            cpf?: any;
             email?:string;
             senha?:string;
             dataN?:any;

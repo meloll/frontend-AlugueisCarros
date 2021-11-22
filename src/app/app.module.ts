@@ -34,17 +34,18 @@ import { ClientesCreateComponent } from './components/clientes-crud/clientes-cre
 import { CarrosCreateComponent } from './components/carros-crud/carros-create/carros-create.component';
 import { CarrosReadComponent } from './components/carros-crud/carros-read/carros-read.component';
 import { CarrosUpdateComponent } from './components/carros-crud/carros-update/carros-update.component';
-
-import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-delete-cliente/dialog-delete-cliente.component';
-import { ClientesUpdateComponent } from './components/clientes-crud/clientes-update/clientes-update.component';
-
-import localePt from '@angular/common/locales/pt'
-import { registerLocaleData } from '@angular/common';
 import { AlugueisReadComponent } from './components/alugueis-crud/alugueis-read/alugueis-read.component';
 import { AlugueisCreateComponent } from './components/alugueis-crud/alugueis-create/alugueis-create.component';
 import { AlugueisUpdateComponent } from './components/alugueis-crud/alugueis-update/alugueis-update.component';
 import { DialogueDeleteAlugueisComponent } from './components/alugueis-crud/dialogue-delete-alugueis/dialogue-delete-alugueis.component';
 import { DialogDeleteCarroComponent } from './components/carros-crud/dialog-delete-carro/dialog-delete-carro.component';
+import { CpfPipe } from './components/clientes-crud/clientes-read/cpf-pipe';
+import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-delete-cliente/dialog-delete-cliente.component';
+import { ClientesUpdateComponent } from './components/clientes-crud/clientes-update/clientes-update.component';
+
+import localePt from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common';
+
 registerLocaleData(localePt,'pt')
 
 
@@ -70,6 +71,7 @@ registerLocaleData(localePt,'pt')
     AlugueisUpdateComponent,
     DialogueDeleteAlugueisComponent,
     DialogDeleteCarroComponent,
+    CpfPipe
   ],
   imports: [
     BrowserModule,

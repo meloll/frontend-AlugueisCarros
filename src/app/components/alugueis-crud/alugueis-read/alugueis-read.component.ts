@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogueDeleteAlugueisComponent } from '../dialogue-delete-alugueis/dialogue-delete-alugueis.component';
 
+
 @Component({
   selector: 'app-alugueis-read',
   templateUrl: './alugueis-read.component.html',

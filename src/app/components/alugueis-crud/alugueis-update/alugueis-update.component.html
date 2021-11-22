@@ -4,10 +4,10 @@
     <mat-card-title>Cadastrar Aluguel</mat-card-title>
     <form>
         <mat-form-field appearance="fill">
-            <mat-label>({{aluguel.cliente.cpf}}) {{aluguel.cliente.nome}}</mat-label>
+            <mat-label>({{aluguel.cliente.cpf|cpf}}) {{aluguel.cliente.nome}}</mat-label>
             <mat-select [(ngModel)]="idCliente" name="idCliente">
               <mat-option *ngFor="let obj of clientes" [value]="obj.id">
-                ({{obj.cpf}}) {{obj.nome}}
+                ({{obj.cpf|cpf}}) {{obj.nome}}
               </mat-option>
             </mat-select>
           </mat-form-field>

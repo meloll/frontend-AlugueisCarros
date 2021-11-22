@@ -5,7 +5,7 @@
             <input matInput type="text" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome" required="true">
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="text" placeholder="CPF" [(ngModel)]="cliente.cpf" name="cpf" required="true"  >
+            <input matInput type="text" placeholder="CPF" [(ngModel)]="cliente.cpf" name="cpf" required="true" maxlength="14"  >
         </mat-form-field>
         <mat-form-field>
             <input matInput  type="email" placeholder="E-mail" [(ngModel)]="cliente.email" name="email" required="true">

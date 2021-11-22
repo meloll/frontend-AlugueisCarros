@@ -20,7 +20,7 @@
           <tr *ngFor="let obj of clientes" >
             <td>{{obj.id}}</td>
             <td>{{obj.nome}}</td>
-            <td>{{obj.cpf}}</td>
+            <td>{{obj.cpf| cpf }}</td>
             <td>{{obj.email}}</td>
             <td>{{obj.dataN}}</td>
             <td>
