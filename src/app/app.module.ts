@@ -45,6 +45,7 @@ import { ClientesUpdateComponent } from './components/clientes-crud/clientes-upd
 
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
+import { AlugueisReadUnicoComponent } from './components/clientes-crud/alugueis-read-unico/alugueis-read-unico.component';
 
 registerLocaleData(localePt,'pt')
 
@@ -71,7 +72,8 @@ registerLocaleData(localePt,'pt')
     AlugueisUpdateComponent,
     DialogueDeleteAlugueisComponent,
     DialogDeleteCarroComponent,
-    CpfPipe
+    CpfPipe,
+    AlugueisReadUnicoComponent,
   ],
   imports: [
     BrowserModule,

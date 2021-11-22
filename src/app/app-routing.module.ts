@@ -1,3 +1,4 @@
+import { AlugueisReadUnicoComponent } from './components/clientes-crud/alugueis-read-unico/alugueis-read-unico.component';
 import { AlugueisCreateComponent } from './components/alugueis-crud/alugueis-create/alugueis-create.component';
 import { CarrosUpdateComponent } from './components/carros-crud/carros-update/carros-update.component';
 import { AlugueisComponent } from './components/views/alugueis/alugueis.component';
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: "carros/update/:id", component: CarrosUpdateComponent},//Forma "correta"
   {path: "clientes/update/:id", component: ClientesUpdateComponent},
   {path: "alugueis/create", component:AlugueisCreateComponent},
-  {path: "alugueis/update/:id",component:AlugueisUpdateComponent}
+  {path: "alugueis/update/:id",component:AlugueisUpdateComponent},
+  {path: "alugueis/read-unico/:id",component:AlugueisReadUnicoComponent}
 ];
 
 @NgModule({

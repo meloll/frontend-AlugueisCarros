@@ -13,6 +13,7 @@
             <th scope="col">Data Nascimento</th>
             <th scope="col">Alterar</th>
             <th scope="col">Excluir</th>
+            <th scope="col">Acessar Alugueis</th>
 
           </tr>
         </thead>
@@ -29,6 +30,9 @@
             </td>
             <td>
               <button mat-raised-button color="warn" (click)="openDialog(obj.id)"  ><i class="material-icons icon-excluir" >highlight_off</i></button>
+            </td>
+            <td>
+              <button mat-raised-button color="accent" routerLink="/alugueis/read-unico/{{obj.id}}"  ><i class="material-icons icon-excluir" >fact_check</i></button>
             </td>
           </tr>
         </tbody>
