@@ -17,7 +17,7 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar'; 
-
+import { Ng2SearchPipeModule } from "ng2-search-filter";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +42,7 @@ import { DialogDeleteCarroComponent } from './components/carros-crud/dialog-dele
 import { CpfPipe } from './components/clientes-crud/clientes-read/cpf-pipe';
 import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-delete-cliente/dialog-delete-cliente.component';
 import { ClientesUpdateComponent } from './components/clientes-crud/clientes-update/clientes-update.component';
+
 
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
@@ -74,6 +75,9 @@ registerLocaleData(localePt,'pt')
     DialogDeleteCarroComponent,
     CpfPipe,
     AlugueisReadUnicoComponent,
+    
+
+
   ],
   imports: [
     BrowserModule,
@@ -96,7 +100,8 @@ registerLocaleData(localePt,'pt')
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    Ng2SearchPipeModule
 
   ],
   providers: [{
