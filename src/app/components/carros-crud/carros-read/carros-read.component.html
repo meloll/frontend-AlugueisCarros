@@ -15,7 +15,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let obj of carros" >
+          <tr *ngFor="let obj of carros | paginate: { itemsPerPage: 8, currentPage: paginaAtual }; let i = index "  >
             <td>{{obj.id}}</td>
             <td>{{obj.marca}}</td>
             <td>{{obj.placa}}</td>
@@ -28,4 +28,5 @@
           </tr>
         </tbody>
       </table>
+      <pagination-controls (pageChange)="paginaAtual = ($event)"></pagination-controls>
 </mat-card>   

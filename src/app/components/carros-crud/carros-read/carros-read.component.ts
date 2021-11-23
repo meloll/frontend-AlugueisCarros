@@ -13,8 +13,9 @@ import { Carro } from '../carro.model';
 })
 export class CarrosReadComponent implements OnInit {
 
-  carros?: Carro[];
+  carros!: Carro[];
   loading:boolean=true;
+  public paginaAtual = 1;
 
   constructor(private carroService:CarroService, private router: Router, public dialog: MatDialog) { }
 
