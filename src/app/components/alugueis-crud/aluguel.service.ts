@@ -9,7 +9,7 @@ import { Aluguel } from './aluguel.model';
 })
 export class AluguelService {
   baseUrl = 'http://app-aluguelcarros.herokuapp.com/alugueis/';
-
+  //baseUrl = 'http://localhost:8080/alugueis/ ';
 
 
   constructor(private snackBar: MatSnackBar,private http:HttpClient) { }

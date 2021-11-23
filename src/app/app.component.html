@@ -1,3 +1,9 @@
 <app-header></app-header>
-<app-nav></app-nav>
+
+<div *ngIf="!getNav()">
+    <app-login></app-login>
+</div>
+<div *ngIf="getNav()">
+    <app-nav></app-nav>
+</div>
 <app-footer></app-footer>

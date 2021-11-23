@@ -42,7 +42,12 @@ import { DialogDeleteCarroComponent } from './components/carros-crud/dialog-dele
 import { CpfPipe } from './components/clientes-crud/clientes-read/cpf-pipe';
 import { DialogDeleteClienteComponent } from './components/clientes-crud/dialog-delete-cliente/dialog-delete-cliente.component';
 import { ClientesUpdateComponent } from './components/clientes-crud/clientes-update/clientes-update.component';
+import{LoginComponent}from './components/views/login/login.component'
 
+import{AngularFireModule} from '@angular/fire'
+import {AngularFireAuth} from '@angular/fire/auth'
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AuthService } from './components/views/login/auth.service';
 
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
@@ -75,6 +80,7 @@ registerLocaleData(localePt,'pt')
     DialogDeleteCarroComponent,
     CpfPipe,
     AlugueisReadUnicoComponent,
+    LoginComponent,
     
 
 
@@ -101,13 +107,28 @@ registerLocaleData(localePt,'pt')
     MatDatepickerModule,
     MatNativeDateModule,
     MatProgressBarModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    AngularFireModule.initializeApp(
+      {
+        apiKey: "AIzaSyDfVg91st9jYQTMjOmejZjMvBG1fUAhPhs",
+        authDomain: "conversor-angular.firebaseapp.com",
+        projectId: "conversor-angular",
+        storageBucket: "conversor-angular.appspot.com",
+        messagingSenderId: "971356464396",
+        appId: "1:971356464396:web:9b5228c2fc0bf8bf81d529"
+  
+      }),
+    AngularFireAuthModule,
+    
+    
 
   ],
   providers: [{
     provide:LOCALE_ID,
     useValue:'pt-BR'
-  }],
+  },
+  AuthService
+  ],
   entryComponents:[],
   bootstrap: [AppComponent]
 })

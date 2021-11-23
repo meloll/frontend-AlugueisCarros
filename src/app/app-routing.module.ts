@@ -13,9 +13,11 @@ import { ClientesUpdateComponent } from './components/clientes-crud/clientes-upd
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlugueisUpdateComponent } from './components/alugueis-crud/alugueis-update/alugueis-update.component';
+import { LoginComponent } from './components/views/login/login.component';
 
 
 const routes: Routes = [
+  {path: " ",component: LoginComponent},
   {path: "home", component: HomeComponent},
   {path: "clientes", component: ClientesComponent},
   {path: "carros", component: CarrosComponent},

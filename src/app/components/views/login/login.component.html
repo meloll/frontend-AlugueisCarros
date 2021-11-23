@@ -1,0 +1,26 @@
+
+<div class="backimg">
+<div class="container">
+<mat-card class="cardlogin">
+    <mat-card-title><b>Login</b></mat-card-title>
+    <form>
+        <mat-form-field class="campo">
+            <input  matInput  type="text" placeholder="E-mail" [(ngModel)]="email" name="email" required="true">
+        </mat-form-field>
+        <mat-form-field class="campo2">
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Senha" [(ngModel)]="senha" name="senha" required="true">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+           
+    </form>
+</mat-card>
+<button class="button" (click)="login()"  mat-raised-button color="accent">
+    Entrar
+</button>
+
+</div>
+</div>
+
+

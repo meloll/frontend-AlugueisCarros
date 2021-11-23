@@ -9,7 +9,7 @@ import { Carro } from './carro.model';
   })
   export class CarroService {
     baseUrl = 'https://app-aluguelcarros.herokuapp.com/carros/ '; // coloquei uma "/" no final da url
-    
+    //baseUrl = 'http://localhost:8080/carros/'; 
     constructor(private snackBar: MatSnackBar ,private http:HttpClient) { }
   
     showMessage(msg: string):void{

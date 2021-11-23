@@ -49,7 +49,10 @@ export class AlugueisUpdateComponent implements OnInit {
       this.clientes = cliente;
       console.log(this.clientes);
     } );
-    
+
+    console.log(this.aluguel.dataEntrega);
+    console.log(this.aluguel.dataSaida);
+
   }
 
   updateAlugueis():void{
