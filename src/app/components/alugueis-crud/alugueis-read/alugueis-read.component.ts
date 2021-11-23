@@ -17,6 +17,7 @@ export class AlugueisReadComponent implements OnInit {
   loading:boolean=true;
   filter:any;
   alugueisfilter!:Aluguel[];
+  public paginaAtual = 1;
 
   constructor(private aluguelService:AluguelService,router:Router,public dialog: MatDialog) { }
 

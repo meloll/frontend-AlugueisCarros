@@ -14,6 +14,7 @@ export class ClientesReadComponent implements OnInit {
 
   clientes!: Cliente[];
   loading:boolean=true;
+  public paginaAtual = 1;
 
 
   constructor(private clienteService: ClienteService,public dialog: MatDialog,private router:Router) { }

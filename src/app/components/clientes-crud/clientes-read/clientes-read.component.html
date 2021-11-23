@@ -18,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let obj of clientes" >
+          <tr *ngFor="let obj of clientes| paginate: { itemsPerPage: 8, currentPage: paginaAtual }; let i = index " >
             <td>{{obj.id}}</td>
             <td>{{obj.nome}}</td>
             <td>{{obj.cpf| cpf }}</td>
@@ -37,5 +37,6 @@
           </tr>
         </tbody>
       </table>
+      <pagination-controls (pageChange)="paginaAtual = ($event)"></pagination-controls>
 </mat-card>   
 

@@ -18,6 +18,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar'; 
 import { Ng2SearchPipeModule } from "ng2-search-filter";
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -119,6 +120,7 @@ registerLocaleData(localePt,'pt')
   
       }),
     AngularFireAuthModule,
+    NgxPaginationModule
     
     
 
