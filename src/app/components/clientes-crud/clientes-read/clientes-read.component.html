@@ -23,7 +23,7 @@
             <td>{{obj.nome}}</td>
             <td>{{obj.cpf| cpf }}</td>
             <td>{{obj.email}}</td>
-            <td>{{obj.dataN}}</td>
+            <td>{{obj.dataN|date : 'dd/MM/yyyy'}}</td>
             <td>
               <button mat-raised-button color="primary" routerLink="/clientes/update/{{obj.id}}"  ><i class="material-icons icon-excluir" >edit</i></button>
 
@@ -37,6 +37,6 @@
           </tr>
         </tbody>
       </table>
-      <pagination-controls (pageChange)="paginaAtual = ($event)"></pagination-controls>
+      <pagination-controls (pageChange)="paginaAtual = ($event)" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
 </mat-card>   
 
