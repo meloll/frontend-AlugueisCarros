@@ -24,7 +24,7 @@
             <td>
               <button mat-raised-button color="primary" routerLink="/carros/update/{{obj.id}}"><i class="material-icons icon-excluir" >edit</i></button><!--Coloquei um routerLink na rota correta-->
             </td>
-            <td><button mat-raised-button color="warn" ><i class="material-icons icon-excluir" (click)="openDialog(obj.id)">highlight_off</i></button></td>
+            <td><button mat-raised-button color="warn" (click)="openDialog(obj.id)" ><i class="material-icons icon-excluir" >highlight_off</i></button></td>
           </tr>
         </tbody>
       </table>

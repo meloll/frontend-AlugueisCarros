@@ -22,26 +22,32 @@ export class AlugueisReadComponent implements OnInit {
   constructor(private aluguelService:AluguelService,router:Router,public dialog: MatDialog) { }
 
   ngOnInit(): void {  
+    this.atualizarTabela();
+
+  }
+
+  atualizarTabela(){
     this.aluguelService.read().subscribe(aluguel =>{
       this.alugueis = aluguel;
       console.log(this.alugueis)
       this.loading=false;
     });
-
   }
+
   delete(id:any){
     console.log(id);
     this.aluguelService.delete(id).subscribe(
     ()=>{
         console.log(`ID ${id} Deletado`);
-        location.reload();
-        
+        this.atualizarTabela();
+        this.aluguelService.showMessage("Aluguel Deletado!")
         },
     (err: any)=>{console.log(err);
       this.aluguelService.showMessage("Não foi possivel excluir, cliente ainda está registrado em aluguéis!")
+      this.loading=false;
         }
     )
-    this.aluguelService.showMessage("Aluguel Deletado!")
+    
   }
 
 

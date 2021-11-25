@@ -1,3 +1,4 @@
+import { setNav } from 'src/app/app.component';
 import { Router } from '@angular/router';
 import { ClienteService } from './../cliente.service';
 import { Component, OnInit } from '@angular/core';
@@ -20,27 +21,37 @@ export class ClientesReadComponent implements OnInit {
   constructor(private clienteService: ClienteService,public dialog: MatDialog,private router:Router) { }
 
   ngOnInit(): void {
-    this.clienteService.read().subscribe(cliente =>{
-      this.clientes = cliente;
-      console.log(this.clientes);
-      this.loading=false;
-    } );
+    setNav(true);
+    this.atualizarTabela()
+    
 
   }
 
 
   delete(id:any){
     console.log(id);
+    this.loading=true;
     this.clienteService.delete(id).subscribe(
     ()=>{
         console.log(`ID ${id} Deletado`);
-        location.reload();
+        //location.reload();
+        this.atualizarTabela()
         this.clienteService.showMessage("Cliente Deletado!")
+        setNav(true);
         },
     (err: any)=>{console.log(err);
       this.clienteService.showMessage("Não foi possivel excluir, cliente ainda está registrado em aluguéis!")
+      this.loading=false;
         }
     )
+  }
+
+  atualizarTabela():void{
+    this.clienteService.read().subscribe(cliente =>{
+      this.clientes = cliente;
+      console.log(this.clientes);
+      this.loading=false;
+    } );
   }
 
   openDialog(id:any) {

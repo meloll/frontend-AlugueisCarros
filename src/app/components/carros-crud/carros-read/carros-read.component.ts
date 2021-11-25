@@ -20,6 +20,14 @@ export class CarrosReadComponent implements OnInit {
   constructor(private carroService:CarroService, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.atualizarTabela();
+  }
+
+  paginaUpdate(): void{
+      this.router.navigate(['/carros/update/'])
+  }
+
+  atualizarTabela(){
     this.carroService.read().subscribe(carro =>{
       this.carros = carro;
       console.log("Carros "+this.carros);
@@ -27,9 +35,6 @@ export class CarrosReadComponent implements OnInit {
     } );
   }
 
-  paginaUpdate(): void{
-      this.router.navigate(['/carros/update/'])
-  }
 
   formataDinheiro(valor:any){
     valor = parseFloat(valor.toFixed(2))
@@ -41,13 +46,15 @@ export class CarrosReadComponent implements OnInit {
 
   delete(id:any){
     console.log(id);
+    this.loading=true;
     this.carroService.delete(id).subscribe(() => {
       console.log(`ID ${id} Deletado com sucesso!`);
-      location.reload();
+      this.atualizarTabela();
       this.carroService.showMessage("Carro excluído com sucesso!")
     },
     (err:any) => {console.log(err);
       this.carroService.showMessage("Não foi possível excluir, o carro ainda está nos registros de aluguéis!")})
+      this.atualizarTabela();
   }
 
   openDialog(id: any){
