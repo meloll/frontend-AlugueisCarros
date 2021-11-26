@@ -1,6 +1,6 @@
 export interface Carro{
     id?:number;
-    marca?:string;
+    marca?:string|null;
     placa?:string;
     preco?:any;
     cor?:string;

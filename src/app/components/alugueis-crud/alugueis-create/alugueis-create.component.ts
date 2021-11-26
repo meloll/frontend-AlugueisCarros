@@ -49,14 +49,19 @@ export class AlugueisCreateComponent implements OnInit {
   }
 
   createAluguel():void{
-    this.aluguel.cliente.id = this.idCliente;
-    this.aluguel.carro.id= this.idCarro;
 
-    this.alugueisService.create(this.aluguel).subscribe(() =>{
-      this.carroService.showMessage("Aluguel Cadastrado!")
-      this.router.navigate(['alugueis']);
+    if(this.aluguel.dataEntrega!=null){
+        this.aluguel.cliente.id = this.idCliente;
+        this.aluguel.carro.id= this.idCarro;
 
-   } )
+        this.alugueisService.create(this.aluguel).subscribe(() =>{
+          this.carroService.showMessage("Aluguel Cadastrado!")
+          this.router.navigate(['alugueis']);
+
+      } )}
+    else{
+      this.alugueisService.showMessage("Não foi possivel cadastrar esse aluguel!")
+    }
 
   }
 

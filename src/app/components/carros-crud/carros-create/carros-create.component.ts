@@ -12,7 +12,7 @@ import { CarroService } from '../carro.service';
 export class CarrosCreateComponent implements OnInit {
 
   carro: Carro={
-    marca: '',
+    marca: null,
     placa: '',
     preco: null,
     cor: ''

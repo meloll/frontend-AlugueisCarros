@@ -9,7 +9,7 @@ import {MatButtonModule} from'@angular/material/button';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatFormFieldModule}from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import {MatDialogModule} from '@angular/material/dialog'
 import { MatTableModule } from '@angular/material/table';
@@ -19,6 +19,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar'; 
 import { Ng2SearchPipeModule } from "ng2-search-filter";
 import { NgxPaginationModule } from 'ngx-pagination';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -120,7 +121,8 @@ registerLocaleData(localePt,'pt')
   
       }),
     AngularFireAuthModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ReactiveFormsModule
     
     
 

@@ -1,11 +1,11 @@
 <mat-card>
     <mat-card-title>Novo Cliente</mat-card-title>
-    <form>
+    <form  >
         <mat-form-field>
-            <input matInput type="text" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome" required="true">
+            <input matInput  type="text" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome" required="true">
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="text" placeholder="CPF" [(ngModel)]="cliente.cpf" name="cpf" required="true" maxlength="14"  >
+            <input matInput  type="text" placeholder="CPF" [(ngModel)]="cliente.cpf" name="cpf" required="true" maxlength="11"  >
         </mat-form-field>
         <mat-form-field>
             <input matInput  type="email" placeholder="E-mail" [(ngModel)]="cliente.email" name="email" required="true">

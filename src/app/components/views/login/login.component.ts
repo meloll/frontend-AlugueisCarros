@@ -28,12 +28,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  navigateToHome():void{
-    setNav(true)
-    let nav=getNav();
-    this.router.navigate(['home'])
-    console.log(nav);
-  }
+ 
 
 
 

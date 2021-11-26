@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cliente } from '../cliente.model';
 import { ClienteService } from '../cliente.service';
@@ -11,10 +12,9 @@ import { ClienteService } from '../cliente.service';
 export class ClientesCreateComponent implements OnInit {
   
   
-  
   cliente: Cliente={
     nome:null,
-    cpf:null,
+    cpf:'',
     email:null,
     dataN:null,
     senha:null,
@@ -22,14 +22,14 @@ export class ClientesCreateComponent implements OnInit {
   hide = true;
 
 
-  constructor(private clienteService:ClienteService,private router:Router) { }
+  constructor(private clienteService:ClienteService,private router:Router,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
 
   createCliente():void{
-    if(this.cliente.cpf!=null)
+    if(this.cliente.cpf.length==11)
       this.clienteService.create(this.cliente).subscribe(() =>{
         this.clienteService.showMessage("Cliente Cadastrado!")
         this.router.navigate(['clientes']);

@@ -21,8 +21,8 @@
           <tbody>
             <tr *ngFor="let obj of aluguiesCliente" >
               <td>{{obj.id}}</td>
-              <td>{{obj.dataSaida}}</td>
-              <td>{{obj.dataEntrega}}</td>
+              <td>{{obj.dataSaida|date : 'dd/MM/yyyy'}}</td>
+              <td>{{obj.dataEntrega|date : 'dd/MM/yyyy'}}</td>
               <td>{{obj.cliente.cpf|cpf}}</td>
               <td>{{obj.carro.placa}}</td>
               <td>{{obj.dia}}</td>
